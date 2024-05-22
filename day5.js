@@ -2,7 +2,6 @@
 //@ Programming Question: Sort an Array
 //* -----------------------------------
 
-
 //% Write a function to sort an array of numbers in an ascending order.
 
 // todo Requirements:
@@ -28,39 +27,38 @@ const sortAscending = (numbers) => {
     }
     return numbers
 
-    // const nums = [...numbers];
-    // nums.sort((a, b) => a - b);
-    // return nums;
+    const nums = [...numbers];
+    nums.sort((a, b) => a - b);
+    return nums;
 
-    // const nums = [...numbers];
-    // nums.sort((a, b) => {
-    //     if (a > b) {
-    //         return 1
-    //     } else if (a < b) {
-    //         return -1
-    //     } else {
-    //         return 0
-    //     }
-    // });
-    // return nums;
+    const nums = [...numbers];
+    nums.sort((a, b) => {
+        if (a > b) {
+            return 1
+        } else if (a < b) {
+            return -1
+        } else {
+            return 0
+        }
+    });
+    return nums;
 
 
-    // numbers.map((number) => {
-    //     for (let i = 0; i < numbers.length - 1; i++) {
-    //         if (numbers[i] > numbers[i + 1]) {
-    //             let temp = numbers[i];
-    //             numbers[i] = numbers[i + 1];
-    //             numbers[i + 1] = temp;
-    //         }
-    //     }
-    // });
-    // return numbers;
+    numbers.map((number) => {
+        for (let i = 0; i < numbers.length - 1; i++) {
+            if (numbers[i] > numbers[i + 1]) {
+                let temp = numbers[i];
+                numbers[i] = numbers[i + 1];
+                numbers[i + 1] = temp;
+            }
+        }
+    });
+    return numbers;
 
 };
 
-
 // todo Example usage :
-// console.log(sortAscending([5, 3, 1, 81])); // Output: [1, 3, 5, 8]
-// console.log(sortAscending([5, 3, 10, 8])); // Output: [3, 5, 8, 10]
+console.log(sortAscending([5, 3, 1, 81])); // Output: [1, 3, 5, 8]
+console.log(sortAscending([5, 3, 10, 8])); // Output: [3, 5, 8, 10]
 console.log(typeof sortAscending([3, 5, 8, 10]));
 console.log(typeof sortAscending);
