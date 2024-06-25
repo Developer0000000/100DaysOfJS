@@ -23,7 +23,7 @@ const generateHash = (str) => {
     let newStr = '';
 
     //* 1st
-    for (const word of words) newStr += word.charAt(0).toUpperCase() + word.slice(1);
+    // for (const word of words) newStr += word.charAt(0).toUpperCase() + word.slice(1);
 
     //* 2nd
     newStr = words.map(word => word.replace(word[0], word[0].toUpperCase())).join('');

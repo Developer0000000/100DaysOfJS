@@ -12,6 +12,8 @@
 const checkTriangleType = (a, b, c) => {
 
 
+    //* 1st
+
     // if (a === b && b === c) return 'equilateral triangle';
     //* OR
     if (a === b && c) return 'equilateral triangle';

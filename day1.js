@@ -17,15 +17,17 @@
 
 const findLongestWord = (str) => {
 
+    //* 1st
         let words = str.split(' '), bigWord = '';
-    
         words.forEach(word => { if (word.length > bigWord.length) bigWord = word; });
     
+    //* 2nd
         for (let i = 0; i < words.length; i++) {
             const word = words[i];
             if (word.length > bigWord.length) bigWord = word;
         }
     
+    //* 3rd
         let i = 0;
         while (i < words.length) {
             const word = words[i];
@@ -33,14 +35,20 @@ const findLongestWord = (str) => {
             i++;
         }
     
+    //* 4th
         words.reduce((acc, val) => { if (bigWord.length < val.length) bigWord = val }, '');
 
+    //* 5th
         bigWord = words.reduce((acc, val) => val.length > acc.length ? val : acc, '');
-
+ 
+    //* 6th
         words.map((word)=>{ if (bigWord.length < word.length) bigWord = word })
 
+    //* 7th
         words.filter((word)=>{ if (bigWord.length < word.length) bigWord = word});
 
+
+    //* 8th
         //  words.sort((a,b) => a.length-b.length );
         // bigWord = words.at(-1);
         words.sort((a,b) => b.length-a.length );

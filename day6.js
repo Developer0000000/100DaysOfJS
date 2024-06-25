@@ -19,25 +19,29 @@
 
 const isPalindrome = (str) => {
 
-    let palindrome = str.split('').reverse().join('');
-    if (palindrome === str) return true;
-    else return false;
+    //* 1st
+    // let palindrome = str.split('').reverse().join('');
+    // if (palindrome === str) return true;
+    // else return false;
 
-    let palindrome = str.toLowerCase().replace(/\W/g, '').split('').reverse().join('');
-    if (palindrome == str) return true;
-    else return false;
+    //* 2nd
+    // let palindrome = str.toLowerCase().replace(/\W/g, '').split('').reverse().join('');
+    // if (palindrome == str) return true;
+    // else return false;
 
-    str = str.toLowerCase().replace(/\W/g,'');
-    let palindrome = str.split('').reverse().join('');
-    return str === palindrome ? true : false
+    //* 3rd
+    // str = str.toLowerCase().replace(/\W/g,'');
+    // let palindrome = str.split('').reverse().join('');
+    // return str === palindrome ? true : false
 
+    //* 4th
+    // const palindrome = str.toLowerCase().replace(/\W/g, '').split('');
+    // for (let i = 0; i <= palindrome.length; i++) {
+    //     if (palindrome[i] !== palindrome[palindrome.length - 1 - i]) return false;
+    // }
+    // return true;
 
-    const palindrome = str.toLowerCase().replace(/\W/g, '').split('');
-    for (let i = 0; i <= palindrome.length; i++) {
-        if (palindrome[i] !== palindrome[palindrome.length - 1 - i]) return false;
-    }
-    return true;
-
+    //* 5th
     const palindrome = str.toLowerCase().replace(/\W/g, '').split('');
 
     let i = 0;
@@ -51,9 +55,7 @@ const isPalindrome = (str) => {
 
     return true
 
-
 };
-
 
 console.log(isPalindrome('A man, a plan, a canal, Panama')); // Output: true
 console.log(isPalindrome('racecar')); // Output: true
